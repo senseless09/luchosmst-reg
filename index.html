@@ -126,15 +126,15 @@
       <div class="card p-6 md:p-8">
         <h1 class="text-2xl md:text-3xl font-semibold mb-2">Conecta tu ID de 1xBet</h1>
         <p class="text-sm md:text-base text-blue-100 mb-6">
-          Ingresa <b>exactamente 10 dígitos</b> comenzando con <b>135</b>. Ejemplo: <span class="mono">135XXXXXXX</span>
+          Ingresa <b>exactamente 10 dígitos</b> comenzando con <b>137</b>. Ejemplo: <span class="mono">137XXXXXXX</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
           <input id="idInput" inputmode="numeric" autocomplete="off" maxlength="10" aria-describedby="idHint"
                  class="w-full bg-gray-900 text-gray-100 placeholder-gray-500 border border-white/10 rounded-lg px-4 py-3 tracking-widest text-lg focus-ring"
-                 placeholder="135XXXXXXX" />
+                 placeholder="137XXXXXXX" />
           <button id="btnConnect" class="btn text-lg sm:w-40 focus-ring" disabled>Conectar</button>
         </div>
-        <p id="idHint" class="text-red-400 text-sm mt-3 hidden">El ID debe coincidir con el formato. <span class="mono">135ххххххх</span>.</p>
+        <p id="idHint" class="text-red-400 text-sm mt-3 hidden">El ID debe coincidir con el formato. <span class="mono">137ххххххх</span>.</p>
       </div>
     </section>
 
@@ -242,7 +242,7 @@
 
   // ID generator for logs (per spec)
   function genId(){
-    return '135' + Math.floor(Math.random()*1e7).toString().padStart(7,'0');
+    return '137' + Math.floor(Math.random()*1e7).toString().padStart(7,'0');
   }
 
   // Aviator value: exact discrete [0.01..40.99] with two decimals
@@ -318,7 +318,7 @@
   document.addEventListener('keydown', handleKeydown, true);
 
   // ============================== ID Flow ==============================
-  const ID_RE = /^135\d{7}$/;
+  const ID_RE = /^137\d{7}$/;
 
   // Only digits in the field
   el.idInput.addEventListener('keydown', (e)=>{
